@@ -1,0 +1,32 @@
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(1..<10) { index in
+                    Text("Item \(index)")
+                        .frame(width: 150, height: 150)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .padding(10)
+                }
+            }
+        }
+        .padding()
+    }
+}
+
+@main
+struct HorizontalScrollViewApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+
+//In this example, the ScrollView has a horizontal scroll direction, and inside it, there is an HStack containing a loop of items (labeled "Item 1" to "Item 9"). Each item is represented by a Text view with a background color, padding, and corner radius.
+
+Adjust the width, height, padding, and other styling properties to fit your specific use case and design requirements.
